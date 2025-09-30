@@ -10,8 +10,17 @@ fn test_common_words() {
 }
 
 #[test]
-fn test_palindrome_validation_combo() {
+fn test_uncommon_words() {
     let validator = WordValidator::new();
-    assert!(validator.is_valid("racecar"));
-    assert!(WordValidator::is_palindrome("racecar"));
+    let common_words = vec!["nucleolus", "mountaineering", "ephemeral", "acumen", "nauseant"];
+    for word in common_words {
+        assert!(validator.is_valid(word), "{} should be valid", word);
+    }
+}
+
+#[test]
+fn test_palindrome_validation() {
+    let validator = WordValidator::new();
+    assert!(validator.is_valid("noon"));
+    assert!(WordValidator::is_palindrome("noon"));
 }
