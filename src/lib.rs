@@ -18,8 +18,7 @@ impl WordValidator {
         self.words.contains(&word.to_lowercase())
     }
 
-    pub fn is_palindrome(word: &str) -> bool {
-        let s_lower = word.to_lowercase();
-        s_lower.chars().eq(s_lower.chars().rev())
+    pub fn get_words(&self) -> &HashSet<String> {
+        &self.words
     }
 }

@@ -19,8 +19,8 @@ fn test_uncommon_words() {
 }
 
 #[test]
-fn test_palindrome_validation() {
+fn test_word_getter() {
     let validator = WordValidator::new();
-    assert!(validator.is_valid("noon"));
-    assert!(WordValidator::is_palindrome("noon"));
+    let words = validator.get_words();
+    assert!(!words.is_empty());
 }
