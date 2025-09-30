@@ -1,10 +1,10 @@
 use std::collections::HashSet;
 
-pub struct WordValidator {
+pub struct CheckWord {
     words: HashSet<String>,
 }
 
-impl WordValidator {
+impl CheckWord {
     pub fn new() -> Self {
         let words_extract = include_str!("../data/words.txt");
         let words: HashSet<String> = words_extract
